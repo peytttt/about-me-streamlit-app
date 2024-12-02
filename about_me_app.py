@@ -3,11 +3,54 @@ import streamlit as st
 # Set the title
 st.title("About Jollie Faith S. Jimenez")
 
-# Add image from GitHub
+# Customizing the page's background color
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background-color: #f0f4f8;  # Light background color
+    }
+    .main {
+        background-color: #ffffff;  # White background for content area
+        padding: 20px;
+        border-radius: 10px;
+    }
+    h1 {
+        color: #2c3e50;  # Dark text for title
+        font-family: 'Arial', sans-serif;
+    }
+    h2 {
+        color: #2980b9;  # Blue color for headers
+    }
+    h3, h4 {
+        color: #34495e;
+    }
+    p {
+        font-size: 18px;
+        color: #2c3e50;
+        line-height: 1.6;
+        font-family: 'Arial', sans-serif;
+    }
+    footer {
+        text-align: center;
+        font-size: 14px;
+        color: #7f8c8d;
+    }
+    .stImage {
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Add image from GitHub with specified size
 st.image("https://raw.githubusercontent.com/peytttt/about-me-streamlit-app/main/images/me.jpg", 
          caption="Jollie Faith S. Jimenez", 
-         width=400, 
+         width=400,  # Adjust the width and height as needed
          use_container_width=True)
+
 # Description
 st.subheader("Hi there!")
 st.write("My name is Jollie Faith S. Jimenez, a 1st-year Computer Engineering student at SNSU.")
@@ -16,25 +59,11 @@ st.write("My name is Jollie Faith S. Jimenez, a 1st-year Computer Engineering st
 st.header("About Me")
 st.write("""
 Hello, I'm Jollie Faith S. Jimenez, 19 years old. I was born in San Fernando, Pampanga, and I'm proud to be a Kapampangan 
-even though I don't speak the language. When I was young, we moved to Surigao City, and since then, we’ve been living here. 
+even though I don't speak the language. We moved here in Surigao City when I was 2 years old, and since then, we’ve been living here. 
 
-I have two siblings, and as the eldest, our family calls us "Tres Marias" since we are all girls. My mother has been raising us 
-alone for quite a long time now, as our father left us around 11 years ago. 
+I have 2 cats named Tobby and Ginger. I named my cat Tobby after Dobby, the house-elf from Harry Potter, and I named my other cat Ginger because his color is orange. 
 
-In 2019, after the school year 2018-2019 ended, I went to Pampanga to live with my father and continue my junior high there. 
-Unfortunately, before the school year 2019-2020 could end, the COVID-19 pandemic hit, and the school year ended early. During 
-the 2020-2021 school year, I was in Grade 9, completing modules at home at that time I was still in Pampanga. On June 28, 2020, I managed to return to Surigao. 
-
-Returning to Surigao was challenging due to strict travel requirements before boarding a plane. I completed Grade 10 at the 
-same school in Pampanga but via online classes. Unfortunately, I couldn't attend my graduation due to the circumstances.
-
-In 2021, I had a fresh start by enrolling in STI Surigao. Initially, having face-to-face classes was difficult because I 
-struggled with anxiety, especially in crowded places. I worried most about reporting tasks, as presenting in front of people 
-made me stutter and gave me shaky hands. However, thanks to those experiences, I’ve started to improve, and I continue working 
-on it. 
-
-In short, I am a shy person, but I am also independent when it comes to getting things done. I’m determined to grow and improve 
-every day.
+My family is religious, so since I was a little kid, I have been serving the church. We are Catholics, and it has been a big part of my life.
 """)
 
 # Hobbies
@@ -66,4 +95,4 @@ certificates = [
 st.write(certificates)
 
 # Footer
-st.markdown("<footer style='text-align:center;'>© 2024 Jollie Faith S. Jimenez</footer>", unsafe_allow_html=True)
+st.markdown("<footer>© 2024 Jollie Faith S. Jimenez</footer>", unsafe_allow_html=True)
