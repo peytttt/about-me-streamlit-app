@@ -4,7 +4,7 @@ import streamlit as st
 st.title("About Jollie Faith S. Jimenez")
 
 # Add image from GitHub
-st.image("https://raw.githubusercontent.com/peytttt/about-me-streamlit-app/images/me.jpg", caption="Jollie Faith S. Jimenez", use_container_width=True)
+st.image("https://raw.githubusercontent.com/peytttt/about-me-streamlit-app/main/images/faith.jpg", caption="Jollie Faith S. Jimenez", use_container_width=True)
 
 
 # Description
