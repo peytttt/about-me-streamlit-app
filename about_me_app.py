@@ -88,8 +88,6 @@ st.write("""
 - **Senior High School:** STI College Surigao (2022-2024)
 - **Currently pursuing:** BS in Computer Engineering at SNSU (1st year)
 """)
-]
-
 # Display the educational attainment as a numbered list
 for i, attainment in enumerate(educational_attainment, 1):
     st.write(f"{i}. {attainment}")
