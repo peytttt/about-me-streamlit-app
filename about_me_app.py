@@ -68,7 +68,7 @@ even though I don't speak the language. We moved here in Surigao City when I was
 
 I have 2 cats named Tobby and Ginger. I named my cat Tobby after Dobby, the house-elf from Harry Potter, and I named my other cat Ginger because his color is orange. 
 
-My family is religious, so since I was a little kid, I have been serving the church. We are Catholics, and it has been a big part of my life.
+My family is religious, and since I was a little kid, I have been serving the church up to this day. We are Catholics, and it has been a significant part of my life.
 """)
 
 # Hobbies and Interests (bulleted list)
@@ -83,11 +83,12 @@ st.write("""
 # Educational Attainment (numbered list)
 st.header("Educational Attainment")
 educational_attainment = [
-    "Junior High School: Completed at Pampanga (2019-2020, partially online)",
-    "Senior High School: STI College Surigao, ICT Strand (Graduated in 2024)",
-    "Currently pursuing: BS in Computer Engineering at SNSU (1st year)"
+    "Elementary School: Surigao West Central Elementary School (2012-2017)",
+    "Junior High School: Pampanga High School (2019-2022)",
+    "Senior High School: STI College Surigao (2022-2024)"
 ]
 
+# Display the educational attainment as a numbered list
 for i, attainment in enumerate(educational_attainment, 1):
     st.write(f"{i}. {attainment}")
 
