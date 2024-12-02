@@ -80,12 +80,14 @@ st.write("""
 - I also like watching documentaries about animals, history, and real-life investigation cases.
 """)
 
-# Educational Attainment (numbered list)
+# Educational Attainment (bulleted list)
 st.header("Educational Attainment")
-educational_attainment = [
-    "Elementary School: Surigao West Central Elementary School (2012-2017)",
-    "Junior High School: Pampanga High School (2019-2022)",
-    "Senior High School: STI College Surigao (2022-2024)"
+st.write("""
+- **Elementary School:** Surigao West Central Elementary School (2012-2017)
+- **Junior High School:** Pampanga High School (2019-2022)
+- **Senior High School:** STI College Surigao (2022-2024)
+- **Currently pursuing:** BS in Computer Engineering at SNSU (1st year)
+""")
 ]
 
 # Display the educational attainment as a numbered list
