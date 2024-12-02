@@ -47,8 +47,7 @@ st.markdown(
 
 # Add image from GitHub with specified size
 st.image("https://raw.githubusercontent.com/peytttt/about-me-streamlit-app/main/images/me.jpg", 
-         caption="Jollie Faith S. Jimenez", 
-         caption="Born on July 15,2005",
+         caption="Jollie Faith S. Jimenez, Born on July 15, 2005", 
          width=400,  # Adjust the width and height as needed
          use_container_width=True)
 
