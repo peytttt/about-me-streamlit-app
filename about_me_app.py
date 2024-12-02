@@ -80,14 +80,16 @@ st.write("""
 - I also like watching documentaries about animals, history, and real-life investigation cases.
 """)
 
-# Educational Attainment
+# Educational Attainment (numbered list)
 st.header("Educational Attainment")
 educational_attainment = [
     "Junior High School: Completed at Pampanga (2019-2020, partially online)",
     "Senior High School: STI College Surigao, ICT Strand (Graduated in 2024)",
     "Currently pursuing: BS in Computer Engineering at SNSU (1st year)"
 ]
-st.write(educational_attainment)
+
+for i, attainment in enumerate(educational_attainment, 1):
+    st.write(f"{i}. {attainment}")
 
 # Certificates
 st.header("Certificates")
