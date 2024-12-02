@@ -3,6 +3,10 @@ import streamlit as st
 # Set the title
 st.title("About Jollie Faith S. Jimenez")
 
+# Add image from GitHub
+st.image("https://raw.githubusercontent.com/peytttt/about-me-streamlit-app/main/images.jpg", caption="Jollie Faith S. Jimenez", use_container_width=True)
+
+
 # Description
 st.subheader("Hi there!")
 st.write("My name is Jollie Faith S. Jimenez, a 1st-year Computer Engineering student at SNSU.")
