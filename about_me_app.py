@@ -47,9 +47,14 @@ st.markdown(
 
 # Add image from GitHub with specified size
 st.image("https://raw.githubusercontent.com/peytttt/about-me-streamlit-app/main/images/me.jpg", 
-         caption="Jollie Faith S. Jimenez, Born on July 15, 2005", 
          width=400,  # Adjust the width and height as needed
          use_container_width=True)
+
+# Personal Details text after the photo
+st.write("**NAME:** Jollie Faith S. Jimenez")
+st.write("**BIRTHDAY:** July 15, 2005")
+st.write("**COURSE:** BS Computer Engineering (BSCPE)")
+st.write("**SECTION:** 1B")
 
 # Description
 st.subheader("Hi there!")
