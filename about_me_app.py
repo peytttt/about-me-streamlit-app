@@ -10,7 +10,7 @@ st.markdown(
     body {
         background-color: #f0f4f8;  /* Light background color */
         color: #2c6b5d;  /* Sage green text */
-        font-family: 'Arial', sans-serif;
+        font-family: 'Times New Roman', Times, serif;
     }
     .main {
         background-color: #ffffff;  /* White background for content area */
@@ -18,14 +18,21 @@ st.markdown(
         border-radius: 10px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
         color: #2c6b5d;  /* Sage green for headers */
+        font-family: 'Times New Roman', Times, serif;
+    }
+    p, li {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+        line-height: 1.6;
     }
     footer {
         text-align: center;
         font-size: 14px;
         color: #7f8c8d;
         margin-top: 50px;
+        font-family: 'Times New Roman', Times, serif;
     }
     .stImage {
         border-radius: 10px;
@@ -76,15 +83,15 @@ st.write("""
 # Certificates Section
 st.header("Certificates")
 
-# Display certificates dynamically
+# Display certificates statically
 st.subheader("My Certificates")
 certificates = [
-    {"name": "Participation Certificate - SHS Expo 2023-2024", "link": "https://example.com/certificate1.pdf"}
+    "Participation Certificate - SHS Expo 2023-2024"
 ]
 
 if certificates:
     for cert in certificates:
-        st.markdown(f"- [{cert['name']}]({cert['link']})")
+        st.write(f"- {cert}")
 else:
     st.write("No certificates available.")
 
