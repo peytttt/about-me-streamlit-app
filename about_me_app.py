@@ -68,7 +68,9 @@ even though I don't speak the language. We moved here in Surigao City when I was
 
 I have 2 cats named Tobby and Ginger. I named my cat Tobby after Dobby, the house-elf from Harry Potter, and I named my other cat Ginger because his color is orange. 
 
-My family is religious, and since I was a little kid, I have been serving the church up to this day. We are Catholics, and it has been a significant part of my life.
+My family is religious, and since I was a little kid, I have been serving the church up to this day. We are Catholics, and it has been a significant part of my life.  
+
+I really love stuffed toys. I don’t sleep without my stuffed toys. I’ve had my stuffed toy since childhood, and until now, I still hug it to sleep. It gives me comfort and assurance.
 """)
 
 # Hobbies and Interests (bulleted list)
