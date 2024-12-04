@@ -80,10 +80,10 @@ st.write("""
 - I also like watching documentaries about animals, history, and real-life investigation cases.
 """)
 
-# Certificates Section with Buttons
+# Certificates Section
 st.header("Certificates")
 
-# Initialize session state for certificates if not already set
+# Initialize session state for certificates
 if "certificates" not in st.session_state:
     st.session_state.certificates = [
         "Certificate of Completion - ICT Strand, STI College Surigao",
@@ -91,49 +91,48 @@ if "certificates" not in st.session_state:
         "Recognition for Outstanding Performance in Programming Logic"
     ]
 
-# Create columns for layout
-col1, col2 = st.columns([1, 3])  # Left column for buttons, right column for displaying certificates
+# Display the certificates dynamically
+st.subheader("My Certificates")
+if st.session_state.certificates:
+    for cert in st.session_state.certificates:
+        st.write(f"- {cert}")
+else:
+    st.write("No certificates available.")
 
-# Left column: Buttons for managing certificates
+# Add a horizontal line to separate certificates and buttons
+st.markdown("---")
+
+# Input area for adding or editing a certificate
+new_certificate = st.text_input("Certificate Name:")
+
+# Buttons section aligned to the bottom left
+col1, col2 = st.columns([1, 5])  # Left column for buttons, right column for spacing
+
 with col1:
-    st.subheader("Manage Certificates")
-    
-    # Add a new certificate
-    new_certificate = st.text_input("Add a new certificate:")
     if st.button("Save"):
         if new_certificate:
             st.session_state.certificates.append(new_certificate)
-            st.success("Certificate added successfully!")
+            st.success("Certificate saved successfully!")
         else:
             st.error("Please enter a certificate name.")
-
-    # Delete a certificate
-    if st.session_state.certificates:
-        certificate_to_delete = st.selectbox("Delete a certificate:", st.session_state.certificates)
-        if st.button("Delete"):
+    
+    certificate_to_delete = st.selectbox("Delete Certificate:", st.session_state.certificates, key="delete_select")
+    if st.button("Delete"):
+        if certificate_to_delete in st.session_state.certificates:
             st.session_state.certificates.remove(certificate_to_delete)
             st.warning("Certificate deleted successfully!")
-
-    # Edit a certificate
-    if st.session_state.certificates:
-        certificate_to_edit = st.selectbox("Edit a certificate:", st.session_state.certificates)
-        updated_certificate = st.text_input("Updated certificate:")
-        if st.button("Edit"):
-            if updated_certificate:
-                index = st.session_state.certificates.index(certificate_to_edit)
-                st.session_state.certificates[index] = updated_certificate
-                st.success("Certificate updated successfully!")
-            else:
-                st.error("Please enter the updated certificate name.")
-
-# Right column: Display the certificates dynamically
-with col2:
-    st.subheader("My Certificates")
-    if st.session_state.certificates:
-        for cert in st.session_state.certificates:
-            st.write(f"- {cert}")
-    else:
-        st.write("No certificates available.")
+        else:
+            st.error("No certificate selected.")
+    
+    certificate_to_edit = st.selectbox("Edit Certificate:", st.session_state.certificates, key="edit_select")
+    updated_certificate = st.text_input("New Certificate Name:", key="edit_input")
+    if st.button("Edit"):
+        if updated_certificate and certificate_to_edit:
+            index = st.session_state.certificates.index(certificate_to_edit)
+            st.session_state.certificates[index] = updated_certificate
+            st.success("Certificate updated successfully!")
+        else:
+            st.error("Please enter a new name for the certificate.")
 
 # Footer
 st.markdown("<footer>© 2024 Jollie Faith S. Jimenez</footer>", unsafe_allow_html=True)
