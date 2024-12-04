@@ -88,9 +88,7 @@ st.header("Certificates")
 # Display certificates statically
 st.subheader("My Certificates")
 certificates = [
-    "Certificate of Completion - ICT Strand, STI College Surigao",
-    "Participation Certificate - Web Development Workshop",
-    "Recognition for Outstanding Performance in Programming Logic"
+    "Participation Certificate - SHS Expo 2023-2024",
 ]
 
 if certificates:
