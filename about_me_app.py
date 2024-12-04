@@ -88,18 +88,56 @@ st.write("""
 - **Senior High School:** STI College Surigao (2022-2024)
 - **Currently pursuing:** BS in Computer Engineering at SNSU (1st year)
 """)
-# Display the educational attainment as a numbered list
-for i, attainment in enumerate(educational_attainment, 1):
-    st.write(f"{i}. {attainment}")
 
-# Certificates
+# Certificates with Buttons
 st.header("Certificates")
-certificates = [
-    "Certificate of Completion - ICT Strand, STI College Surigao",
-    "Participation Certificate - Web Development Workshop",
-    "Recognition for Outstanding Performance in Programming Logic"
-]
-st.write(certificates)
+
+# Initialize session state for certificates if not already set
+if "certificates" not in st.session_state:
+    st.session_state.certificates = [
+        "Certificate of Completion - ICT Strand, STI College Surigao",
+        "Participation Certificate - Web Development Workshop",
+        "Recognition for Outstanding Performance in Programming Logic"
+    ]
+
+# Display existing certificates
+st.subheader("My Certificates")
+if st.session_state.certificates:
+    for cert in st.session_state.certificates:
+        st.write(f"- {cert}")
+else:
+    st.write("No certificates available.")
+
+# Add a new certificate
+st.subheader("Add a Certificate")
+new_certificate = st.text_input("Enter a new certificate:")
+if st.button("Save Certificate"):
+    if new_certificate:
+        st.session_state.certificates.append(new_certificate)
+        st.success(f"Certificate '{new_certificate}' added successfully!")
+    else:
+        st.error("Please enter a certificate name.")
+
+# Delete an existing certificate
+st.subheader("Delete a Certificate")
+if st.session_state.certificates:
+    certificate_to_delete = st.selectbox("Select a certificate to delete:", st.session_state.certificates)
+    if st.button("Delete Certificate"):
+        st.session_state.certificates.remove(certificate_to_delete)
+        st.warning(f"Certificate '{certificate_to_delete}' deleted successfully!")
+
+# Edit an existing certificate
+st.subheader("Edit a Certificate")
+if st.session_state.certificates:
+    certificate_to_edit = st.selectbox("Select a certificate to edit:", st.session_state.certificates)
+    updated_certificate = st.text_input("Enter the updated certificate:")
+    if st.button("Edit Certificate"):
+        if updated_certificate:
+            index = st.session_state.certificates.index(certificate_to_edit)
+            st.session_state.certificates[index] = updated_certificate
+            st.success(f"Certificate updated to '{updated_certificate}'!")
+        else:
+            st.error("Please enter the updated certificate name.")
 
 # Footer
 st.markdown("<footer>© 2024 Jollie Faith S. Jimenez</footer>", unsafe_allow_html=True)
