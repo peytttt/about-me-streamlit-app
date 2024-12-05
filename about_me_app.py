@@ -48,7 +48,7 @@ st.image(
 
 st.write("**NAME:** Jollie Faith S. Jimenez")
 st.write("**BIRTHDAY:** July 15, 2005")
-st.write("**COURSE:** BS Computer Engineering (BSCPE)")
+st.write("**COURSE:** Bachelor of Science in Computer Engineering (BSCPE)")
 st.write("**SECTION:** 1B")
 
 st.subheader("Hi there!")
